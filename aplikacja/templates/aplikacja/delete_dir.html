@@ -1,0 +1,33 @@
+{%  load static %}
+
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+	<title>Removing a directory</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <p>
+            <label for="name">Directory name: </label>
+        </p>
+        <p>
+            <select id="name" name="name">
+                {% for directory in directory_list %}
+                <option value="{{ directory.name }}">{{ directory.name }}</option>
+                {% endfor %}
+            </select>
+        </p>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>
