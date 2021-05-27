@@ -48,10 +48,15 @@ def addSectionsOfFile(file, prover, VCs):
         if line_num in used_lines:
             continue
         used_lines.add(line_num)
+
+        index = words.index('returns')
+        status = words[index + 1]
+        section.save()
+
         section = Section(line=line_num,
                           creation_date=timezone.now(),
                           category="Postcondition",
-                          status="Proved",
+                          status=status,
                           parent=file)
         section.status_data = Status_Data(field=s, user=file.owner)
         section.status_data.save()

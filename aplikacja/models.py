@@ -46,27 +46,21 @@ class Section(models.Model):
     line = models.IntegerField(blank=True)
     creation_date = models.DateTimeField('date of creation', blank=False)
     CATEGORY_CHOICES = [
-        ('req', 'requires'),
-        ('ens', 'ensures'),
-        ('var', 'variant'),
-        ('invr', 'invariant'),
-        ('pred', 'predicate'),
-        ('ghst', 'ghost'),
-        ('ass', 'assert'),
-        ('lemm', 'lemma'),
-        ('asgn', 'assigns'),
-        ('exit', 'exits'),
-        ('chck', 'check'),
-        ('brk', 'breaks'),
-        ('cont', 'continues'),
-        ('ret', 'returns')
+        ('req', 'procedure'),
+        ('ens', 'property'),
+        ('var', 'lemma'),
+        ('invr', 'assertion'),
+        ('pred', 'invariant'),
+        ('ghst', 'precondition'),
+        ('ass', 'postcondition'),
     ]
     category = models.CharField(max_length=4, choices=CATEGORY_CHOICES, blank=False)
     STATUS_CHOICES = [
         ('pro', 'Proved'),
         ('inv', 'Invalid'),
         ('cex', 'CounterExample'),
-        ('unc', 'Unchecked')
+        ('unc', 'Unchecked'),
+        ('val', 'Valid')
     ]
     status = models.CharField(max_length=3, choices=STATUS_CHOICES, blank=False)
     status_data = models.ForeignKey(Status_Data, on_delete=models.CASCADE)

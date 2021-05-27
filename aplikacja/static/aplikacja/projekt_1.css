@@ -121,6 +121,22 @@
     	background-color: var(--focus_color);
     }
 
+	.Proved {
+		background-color: darkgreen;
+	}
+	.Valid {
+		background-color: greenyellow;
+	}
+	.Invalid {
+		background-color: darkorange;
+	}
+	.CounterExample {
+		background-color: red;
+	}
+	.Unchecked {
+		background-color: yellow;
+	}
+
 	.tab-wszystko {
 		float: right;
 		width: 80%;

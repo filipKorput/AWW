@@ -2,7 +2,7 @@
 
         {%for section in sectionList %}
 
-            <div class="tooltip">
+            <div class="tooltip {{ section.1 }}">
                 <pre>{{ section.0 }}</pre>
                 <span class="tooltiptext">{{ section.2 }}</span>
             </div>
