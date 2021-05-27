@@ -125,7 +125,7 @@
 		background-color: darkgreen;
 	}
 	.Valid {
-		background-color: greenyellow;
+		background-color: darkolivegreen;
 	}
 	.Invalid {
 		background-color: darkorange;
@@ -135,6 +135,9 @@
 	}
 	.Unchecked {
 		background-color: yellow;
+	}
+	.Unknown {
+		background-color: deeppink;
 	}
 
 	.tab-wszystko {
