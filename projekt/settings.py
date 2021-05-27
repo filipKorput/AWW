@@ -29,7 +29,9 @@ SECRET_KEY = 'django-insecure-u4-src^nibq^0o3(zw5c8a5^3hcjx%mft3nl!f&0a1z$3&61)@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'students.mimuw.edu.pl'
+]
 
 
 # Application definition
