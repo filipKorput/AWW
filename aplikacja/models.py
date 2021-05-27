@@ -46,13 +46,13 @@ class Section(models.Model):
     line = models.IntegerField(blank=True)
     creation_date = models.DateTimeField('date of creation', blank=False)
     CATEGORY_CHOICES = [
-        ('req', 'procedure'),
-        ('ens', 'property'),
-        ('var', 'lemma'),
-        ('invr', 'assertion'),
-        ('pred', 'invariant'),
-        ('ghst', 'precondition'),
-        ('ass', 'postcondition'),
+        ('proc', 'procedure'),
+        ('prop', 'property'),
+        ('lemm', 'lemma'),
+        ('ass', 'assertion'),
+        ('invr', 'invariant'),
+        ('pre', 'precondition'),
+        ('post', 'post-condition'),
     ]
     category = models.CharField(max_length=4, choices=CATEGORY_CHOICES, blank=False)
     STATUS_CHOICES = [

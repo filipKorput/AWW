@@ -52,9 +52,18 @@ def addSectionsOfFile(file, prover, VCs):
         index = words.index('returns')
         status = words[index + 1]
 
+        category = ""
+        index = words.index('Goal')
+        if words[index + 1] == "Post-condition":
+            category = "post-condition"
+        elif words[index + 3] == "Invariant":
+            category = "invariant"
+        elif words[index + 4] == "variant":
+            category = "variant"
+
         section = Section(line=line_num,
                           creation_date=timezone.now(),
-                          category="Postcondition",
+                          category=category,
                           status=status,
                           parent=file)
         section.status_data = Status_Data(field=s, user=file.owner)
