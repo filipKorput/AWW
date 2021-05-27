@@ -89,6 +89,7 @@ def detail(request, name):
     logger.error(file)
     with open(file.blob.path, 'r', encoding='UTF-8') as fileObject:
         data = fileObject.read().replace('\n', '</br>')
+    summary = file.summary.replace('\n', '<br>')
     sectionList = getSectionsOfFile(file)
     context = {
         'directory_list': Directory.objects.filter(availability=True),
@@ -98,7 +99,7 @@ def detail(request, name):
         'sectionList': sectionList,
         'proverForm': ProversForm(),
         'VCForm': VCsForm(),
-        'summary': file.summary
+        'summary': summary
     }
     return render(request, 'aplikacja/index.html', context)
 
