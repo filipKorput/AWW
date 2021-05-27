@@ -5,6 +5,13 @@ from django.db import models
 from django.utils import timezone
 
 
+class User(AbstractBaseUser):
+    name = models.CharField(max_length=50, unique=True, primary_key=True)
+    login = models.CharField(max_length=50, unique=True)
+    USERNAME_FIELD = 'name'
+    REQUIRED_FIELDS = ['name', 'login']
+
+
 class Directory(models.Model):
     name = models.CharField(max_length=100, blank=False, primary_key=True, unique=True)
     description = models.CharField(max_length=1000, blank=True)
