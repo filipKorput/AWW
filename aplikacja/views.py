@@ -16,7 +16,7 @@ def ekran_logowania(request):
 def authentication(request):
     username = request.POST.get('username')
     password = request.POST.get('password')
-    user = authenticate(request, username, password)
+    user = authenticate(request, username=username, password=password)
 
     if user:
         login(request, user)
