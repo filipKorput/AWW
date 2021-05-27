@@ -55,11 +55,11 @@ def addSectionsOfFile(file, prover, VCs):
         category = ""
         index = words.index('Goal')
         if words[index + 1] == "Post-condition":
-            category = "post-condition"
+            category = "Post-condition"
         elif words[index + 3] == "Invariant":
-            category = "invariant"
+            category = "Invariant"
         elif words[index + 4] == "variant":
-            category = "variant"
+            category = "Variant"
 
         section = Section(line=line_num,
                           creation_date=timezone.now(),

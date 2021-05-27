@@ -50,9 +50,10 @@ class Section(models.Model):
         ('prop', 'property'),
         ('lemm', 'lemma'),
         ('ass', 'assertion'),
-        ('invr', 'invariant'),
+        ('var', 'Variant'),
+        ('invr', 'Invariant'),
         ('pre', 'precondition'),
-        ('post', 'post-condition'),
+        ('post', 'Post-condition'),
     ]
     category = models.CharField(max_length=4, choices=CATEGORY_CHOICES, blank=False)
     STATUS_CHOICES = [
