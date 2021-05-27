@@ -139,6 +139,9 @@
 	.Unknown {
 		background-color: deeppink;
 	}
+	.Timeout {
+		background-color: blueviolet;
+	}
 
 	.tab-wszystko {
 		float: right;

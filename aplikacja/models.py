@@ -61,7 +61,9 @@ class Section(models.Model):
         ('inv', 'Invalid'),
         ('cex', 'CounterExample'),
         ('unc', 'Unchecked'),
-        ('val', 'Valid')
+        ('val', 'Valid'),
+        ('unk', 'Unknown'),
+        ('tim', 'Timeout')
     ]
     status = models.CharField(max_length=3, choices=STATUS_CHOICES, blank=False)
     status_data = models.ForeignKey(Status_Data, on_delete=models.CASCADE)
