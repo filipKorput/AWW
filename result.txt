@@ -1,0 +1,4 @@
+[wp] [Alt-Ergo] Goal typed_triangle_call_sqrt_pre : Unknown (Qed:2ms) (206ms)
+[wp] [Alt-Ergo] Goal typed_triangle_post : Timeout (Qed:7ms) (10s) (Stronger)
+[wp] Proved goals:    0 / 2
+Alt-Ergo:        0  (interrupted: 1) (unknown: 1)
