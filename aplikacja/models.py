@@ -1,11 +1,11 @@
-from django.contrib.auth.base_user import AbstractBaseUser
+from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.models import User
 from django.db import models
 #from mttp.models import MTTPModel, TreeForeignKey
 from django.utils import timezone
 
 
-class User(AbstractBaseUser):
+class User(AbstractUser):
     name = models.CharField(max_length=50, unique=True, primary_key=True)
     login = models.CharField(max_length=50, unique=True)
     USERNAME_FIELD = 'name'
