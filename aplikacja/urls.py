@@ -20,9 +20,9 @@ urlpatterns = [
     # ex: /aplikacja/change_prover/file.name/
     path('change_prover/<str:name>/', views.change_prover, name='change_prover'),
     # ex: /aplikacja/change_VC/file.name/
-    path('change_VC/<str:name>/', views.change_VC, name='change_VC')
+    path('change_VC/<str:name>/', views.change_VC, name='change_VC'),
     # ex: /aplikacja/login/
-    path('login/', views.ekran_logowania, name='login')
+    path('login/', views.ekran_logowania, name='login'),
     # ex: /aplikacja/authentication/
     path('authentication/', views.authentication, name='authentication'),
 ]
