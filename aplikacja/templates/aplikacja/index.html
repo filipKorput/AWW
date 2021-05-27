@@ -18,20 +18,20 @@
 
     	<div class="menu">
         	<button class="menuButton">
-                <a href="http://localhost:8000/aplikacja/add_dir/">Add directory</a>
+                <a href="../../add_dir/">Add directory</a>
             </button>
             <button class="menuButton">
-                <a href="http://localhost:8000/aplikacja/add_file/">Add file</a>
+                <a href="../../add_file/">Add file</a>
             </button>
             <button class="menuButton">
-                <a href="http://localhost:8000/aplikacja/delete_dir/">Delete directory</a>
+                <a href="../../delete_dir/">Delete directory</a>
             </button>
             <button class="menuButton">
-                <a href="http://localhost:8000/aplikacja/delete_file/">Delete file</a>
+                <a href="../../delete_file/">Delete file</a>
             </button>
             {% if file %}
                 <button class="menuButton">
-                    <a href="http://localhost:8000/aplikacja/rerun_frama/{{ file.name }}/">Rerun verification</a>
+                    <a href="../../rerun_frama/{{ file.name }}/">Rerun verification</a>
                 </button>
             {% endif %}
 
@@ -62,7 +62,7 @@
 			</div>
 
 			<div id="tab1" class="tabcontent">
-                <form action="http://localhost:8000/aplikacja/change_prover/{{ file.name }}/" method="POST">
+                <form action="../../change_prover/{{ file.name }}/" method="POST">
                     {% csrf_token %}
                     {{ proverForm }}
                     <input type="submit" id="prover-submit"/>
@@ -70,7 +70,7 @@
 			</div>
 
 			<div id="tab2" class="tabcontent">
-                <form action="http://localhost:8000/aplikacja/change_VC/{{ file.name }}/" method="POST">
+                <form action="../../change_VC/{{ file.name }}/" method="POST">
                     {% csrf_token %}
                     {{ VCForm }}
                     <input type="submit" id="VC-submit"/>

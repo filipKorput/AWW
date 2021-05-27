@@ -4,7 +4,7 @@
             {%for file in file_list %}
                 {% if file.parent == directory %}
                     <li>
-                        <a href="http://localhost:8000/aplikacja/detail/{{ file.name }}/">{{ file.name }}</a>
+                        <a href="../../../aplikacja/detail/{{ file.name }}/">{{ file.name }}</a>
                     </li>
                 {% endif %}
             {%endfor%}

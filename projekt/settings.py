@@ -30,7 +30,8 @@ SECRET_KEY = 'django-insecure-u4-src^nibq^0o3(zw5c8a5^3hcjx%mft3nl!f&0a1z$3&61)@
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'students.mimuw.edu.pl'
+    'students.mimuw.edu.pl',
+    'localhost'
 ]
 
 
