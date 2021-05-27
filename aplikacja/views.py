@@ -51,7 +51,6 @@ def addSectionsOfFile(file, prover, VCs):
 
         index = words.index('returns')
         status = words[index + 1]
-        section.save()
 
         section = Section(line=line_num,
                           creation_date=timezone.now(),
