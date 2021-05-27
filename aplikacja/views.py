@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.views import LoginView
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
@@ -9,6 +10,8 @@ from .obslugaFramy import *
 import logging
 from django.utils import timezone
 
+class UserLogin(LoginView):
+    template_name = 'aplikacja/login.html'
 
 def ekran_logowania(request):
     return render(request, 'aplikacja/login.html')
