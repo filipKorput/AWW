@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_ssh_deployer'
 ]
 
 MIDDLEWARE = [
@@ -131,39 +130,3 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEPLOYER_INSTANCES = {
-    "dev": {
-        "name": "projekt",
-        "repository": "git@github.com:youruser/your-project.git",
-        "branch": "dev",
-        "settings": "config.settings.dev",
-        "requirements": "requirements/dev.txt",
-        "code_path": "/var/django/sites",
-        "venv_python_path": "/usr/bin/python3",
-        "upgrade_pip": True,
-        "servers": ["devserver.example.com"],
-        "server_user": "deploy_user",
-        "save_deploys": 3,
-        "selinux": False,
-        "collectstatic": False,
-        "migrate": False,
-    },
-    "prod": {
-        "name": "your-project",
-        "repository": "git@github.com:youruser/your-project.git",
-        "branch": "prod",
-        "settings": "config.settings.prod",
-        "requirements": "requirements/prod.txt",
-        "code_path": "/var/django/sites",
-        "venv_python_path": "/usr/bin/python3",
-        "upgrade_pip": True,
-        "servers": ["prodserver-1.example.com", "prodserver-2.example.com"],
-        "server_user": "deploy_user",
-        "save_deploys": 3,
-        "selinux": True,
-        "additional_commands": [
-            "chmod -R a+rX /var/django/sites/your-project-master",
-            "curl -kLs -o /dev/null --max-time 5 --resolve 'your-domain.com:443:127.0.0.1' https://your-domain.com/",
-        ],
-    },
-}
