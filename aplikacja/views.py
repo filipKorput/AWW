@@ -60,7 +60,7 @@ def addSectionsOfFile(file, prover, VCs):
             category = "Invariant"
         elif words[index + 4] == "variant":
             category = "Variant"
-        elif words[index + 3] == "'Pre-condtiion":
+        elif words[index + 3] == "\'Pre-condition":
             category = "Pre-condition"
 
         section = Section(line=line_num,
